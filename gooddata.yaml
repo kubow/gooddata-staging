@@ -1,0 +1,8 @@
+profiles:
+  dev:
+    host: https://jakubvajda.demo.cloud.gooddata.com/
+    token: $GOODDATA_API_TOKEN
+    workspace_id: eb3b1198d6a948979bb0bfb11c09c41c
+    data_source: motherduck-source
+source_dir: analytics
+default_profile: dev
