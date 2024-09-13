@@ -1,0 +1,71 @@
+# A dataset is a logical object that represents a set of related facts, attributes, and attribute labels.
+# Datasets are basic organization units of a logical data model.
+# Read more about Datasets:
+# https://www.gooddata.com/developers/cloud-native/doc/cloud/model-data/concepts/dataset/
+
+type: dataset
+id: bank_reviews
+
+table_path: main/bank_reviews
+
+title: Bank reviews
+description: Bank reviews
+tags:
+  - Bank reviews
+
+fields:
+  author:
+    type: attribute
+    source_column: author
+    data_type: STRING
+    title: Author
+    description: Author
+    tags:
+      - Bank reviews
+  bank:
+    type: attribute
+    source_column: bank
+    data_type: STRING
+    title: Bank
+    description: Bank
+    tags:
+      - Bank reviews
+  location:
+    type: attribute
+    source_column: location
+    data_type: STRING
+    title: Location
+    description: Location
+    tags:
+      - Bank reviews
+  text:
+    type: attribute
+    source_column: text
+    data_type: STRING
+    title: Text
+    description: Text
+    tags:
+      - Bank reviews
+  like:
+    type: fact
+    source_column: like
+    data_type: NUMERIC
+    title: Like
+    description: Like
+    tags:
+      - Bank reviews
+  star:
+    type: fact
+    source_column: star
+    data_type: INT
+    title: Star
+    description: Star
+    tags:
+      - Bank reviews
+
+references:
+  - dataset: date
+    sources:
+      - source_column: date
+        data_type: DATE
+        target: date
